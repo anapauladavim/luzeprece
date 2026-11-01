@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" role="img" aria-labelledby="t d">
+<title id="t">Nossa Senhora de Fátima</title><desc id="d">Ilustração devocional delicada de Nossa Senhora de Fátima com véu branco, mãos em oração, rosário e halo dourado.</desc>
+<defs>
+<radialGradient id="glow"><stop stop-color="#f3e4be" stop-opacity=".95"/><stop offset="1" stop-color="#f3e4be" stop-opacity="0"/></radialGradient>
+<linearGradient id="veil" x1="0" x2="1"><stop stop-color="#e4e5dc"/><stop offset=".45" stop-color="#fffefa"/><stop offset="1" stop-color="#e9e9dd"/></linearGradient>
+<linearGradient id="robe" x1="0" x2="1"><stop stop-color="#e4e9e3"/><stop offset=".5" stop-color="#fcfbf4"/><stop offset="1" stop-color="#d7e2db"/></linearGradient>
+</defs>
+<ellipse cx="210" cy="244" rx="180" ry="220" fill="url(#glow)"/>
+<circle cx="210" cy="146" r="90" fill="none" stroke="#c7aa76" stroke-width="2.5" opacity=".7"/>
+<circle cx="210" cy="146" r="100" fill="none" stroke="#c7aa76" stroke-dasharray="2 9" stroke-width="2" opacity=".6"/>
+<path d="M189 74v-30m-12 12h24" stroke="#b89b67" stroke-width="5" stroke-linecap="round"/>
+<path d="M210 55c-52 0-84 37-93 91-10 59-49 149-71 329 60 37 268 38 328 0-23-181-60-269-71-329-9-55-43-91-93-91Z" fill="url(#veil)" stroke="#b8b9aa" stroke-width="2.5"/>
+<path d="M207 92c-48 4-62 57-53 94l28 24 57-2 29-23c8-47-17-92-61-93Z" fill="#e4d2b8"/>
+<path d="M164 136c-6-62 31-70 46-70 39 1 67 31 58 76-4-13-13-25-21-33-29 10-54 9-80 1Z" fill="#856e5d"/>
+<path d="M153 173c5 33 19 54 57 57 35-2 53-27 58-57l-8-3c-5 37-26 48-50 49-23 0-41-15-49-48Z" fill="#eddfca" opacity=".65"/>
+<path d="M170 157q13-6 26 0m28 0q12-7 24 0" fill="none" stroke="#8d7366" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M183 162h3m43 0h3" stroke="#66574d" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M210 164l-4 18 6 2" fill="none" stroke="#b79886" stroke-width="2" stroke-linecap="round"/>
+<path d="M197 195q13 8 27 0" fill="none" stroke="#a27c74" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M174 211c-34 45-69 150-80 273 60 30 171 33 234 0-12-117-41-212-80-273-11 23-63 30-74 0Z" fill="url(#robe)" stroke="#c6d1c8" stroke-width="2"/>
+<path d="M140 242Q97 342 82 482m198-238q47 112 59 238" fill="none" stroke="#c6ab7b" stroke-width="3" opacity=".75"/>
+<path d="M159 264c-20 31-19 59 3 88 14 18 34 36 48 45 18-9 46-40 54-57 14-29 9-51-8-77-19 28-31 37-46 38-16-1-35-18-51-37Z" fill="#f1e9da" stroke="#c4b8a6" stroke-width="2"/>
+<path d="M183 279c0 33 8 48 27 68 20-17 30-37 29-69" fill="none" stroke="#c7ac89" stroke-width="3"/>
+<path d="M193 303q-5 17 17 32 22-15 17-32m-34 6q18 14 34 0" fill="#e8c5a6" stroke="#a88469" stroke-width="2"/>
+<path d="M206 344q-15 22-8 50m20-50q16 25 7 50" fill="none" stroke="#b5a086" stroke-width="1.8"/>
+<g fill="#c4a66f"><circle cx="198" cy="356" r="4"/><circle cx="197" cy="367" r="4"/><circle cx="197" cy="379" r="4"/><circle cx="200" cy="390" r="4"/><circle cx="203" cy="401" r="4"/><circle cx="208" cy="412" r="4"/><circle cx="213" cy="423" r="4"/></g>
+<path d="M213 425v22m-9-7h18" stroke="#b69460" stroke-width="3" stroke-linecap="round"/>
+<path d="M126 129q-19 145-55 337M294 129q19 145 55 337" fill="none" stroke="#d2b787" stroke-width="4" opacity=".85"/>
+<path d="M84 491Q210 531 336 491" fill="none" stroke="#b9a17a" stroke-width="2" opacity=".5"/>
+</svg>
