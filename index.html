@@ -523,7 +523,27 @@ a:focus-visible,button:focus-visible{outline:3px solid #b68c51!important;outline
 .candles-section .candle-form-card{box-shadow:none!important}
 @media(max-width:760px){.hero-grid{display:flex!important;flex-direction:column!important;gap:8px!important}.hero-art{max-width:240px!important}.hero-art .hero-rosary-image{max-height:295px!important}.hero h1{font-size:56px!important}.hero-campaign-wrap{padding-left:14px!important;padding-right:14px!important}.hero .hero-intro{padding:0!important}.schedule-card{width:100%!important}.altar-aparecida img{height:240px!important}.hero-context{margin-top:8px!important}}
 
-.intention-card:after{content:none!important;display:none!important}\n</style>
+.intention-card:after{content:none!important;display:none!important}\n
+/* ORAÇÃO LIVRE E ALTAR VISÍVEL — novembro 2026 */
+.schedule-card,.hero-context{display:none!important}
+.hero,.hero-campaign{padding-bottom:12px!important}
+.hero-art .hero-rosary-image{height:290px!important;width:auto!important;object-fit:contain!important;display:block;margin:auto;border-radius:14px;mix-blend-mode:multiply;filter:contrast(.95) saturate(.7)!important}
+.hero-grid{min-height:unset!important;gap:24px!important}
+.hero .hero-intro{padding-top:12px!important;padding-bottom:10px!important}
+.hero-description{margin-bottom:16px!important}
+.hero-lower{display:none!important}
+.altar-home{background:#f7f2e9;color:#405b5c;padding:20px max(22px,calc((100vw - 1100px)/2)) 24px!important;border-bottom:1px solid #dce2d9}
+.altar-home-top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:12px}
+.altar-home h2{font:500 clamp(23px,3vw,35px) var(--font-serif);margin:4px 0;color:#405b5c}
+.altar-home p{margin:2px 0;color:#657b76;font-size:13px}
+.altar-home .altar-votives{display:flex!important;flex-wrap:wrap;min-height:90px!important;align-items:center;justify-content:center;gap:9px;background:#fffaf1!important;border:1px solid #e5ded0!important;border-radius:20px;padding:12px!important;box-shadow:none!important}
+.altar-moved-note{font-size:13px;text-align:center;color:#6a7e77}
+.image-credit,.image-credit a{font-size:10px;color:#cddad4!important}
+.altar-aparecida img{height:250px!important;width:auto!important;border-radius:9px;filter:saturate(.72)}
+.prayer-panel .participant-badge{display:inline-flex!important}
+@media(max-width:760px){.hero-art .hero-rosary-image{height:225px!important}.altar-home{padding:18px 14px 20px!important}.altar-home-top{gap:8px;align-items:flex-start}.altar-home-top .button{padding:10px!important;font-size:11px!important;white-space:nowrap}.altar-home .altar-votives{min-height:76px!important}}
+
+</style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
   <script>
 // Para habilitar as velas compartilhadas e a contagem ao vivo, preencha abaixo.
@@ -554,30 +574,34 @@ window.TERCO_CONFIG = {
       <div class="hero-intro">
         
         <span class="welcome-seal">UM ESPAÇO PARA ACOLHER SUA FÉ</span><h1 id="heroTitle">Luz e<br><em>Prece</em></h1><p style="font-family:var(--font-serif);font-style:italic;color:#9a7f5c;font-size:clamp(19px,2.5vw,30px);margin:0 0 14px">Um instante de paz.</p>
-        <p class="hero-description">Um espaço para encontrar serenidade, agradecer, pedir e confiar. Reze o terço sob o manto de Nossa Senhora, onde estiver e quando precisar.</p>
+        <p class="hero-description">Um instante de serenidade para rezar, agradecer e confiar. Comece o terço quando desejar.</p>
       </div>
-      <div class="hero-art"><img class="hero-rosary-image" src="assets/nossa-senhora-fatima.svg" alt="Ilustração delicada de Nossa Senhora de Fátima, em oração" width="390" height="503" /></div>
+      <div class="hero-art"><img class="hero-rosary-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Our_Lady_of_Fatima_Statue.jpg" alt="Imagem de Nossa Senhora de Fátima no Santuário de Fátima" width="390" height="503" /></div>
       <div class="hero-buttons">
         <button class="button button-primary hero-main-cta" id="joinButton"><span class="cta-play" aria-hidden="true">▶</span><span class="cta-copy"><strong class="cta-title">Participar do terço</strong><small>Um instante de paz, no seu próprio ritmo.</small></span><span class="cta-arrow" aria-hidden="true">→</span></button>
         <a class="button button-outline hero-more" href="#intencoes">Saiba mais <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="schedule-card">
+      <div class="schedule-card" hidden aria-hidden="true">
         <div class="schedule-top"><span id="scheduleHeading">ENCONTRO DIÁRIO, ORAÇÃO A QUALQUER HORA</span><span class="live-chip" id="liveChip">● TERÇO DISPONÍVEL AGORA</span></div>
         <div class="schedule-row"><div><strong id="clockLabel">13:00</strong><small id="timeSubtitle">A corrente se abre às 13h</small></div><div class="schedule-divider"></div><div class="countdown" id="countdown">—</div></div>
         <p class="timezone-note" id="timezoneNote">Todos os horários exibidos são de Brasília (UTC−3). Reze de onde estiver.</p>
         <select id="timezoneSelect" hidden aria-hidden="true"><option value="America/Sao_Paulo">Brasília</option></select>
       </div>
-      <div class="hero-context">
+      <div class="hero-context" hidden aria-hidden="true">
         <div class="collective-callout" id="collectiveCallout" role="status" aria-live="polite"><div><strong id="collectiveHeadline">Uma pausa para a fé, sempre que precisar.</strong><p id="collectiveMessage">Chegue como estiver. Aqui há espaço para sua fé, seus agradecimentos, suas preocupações e sua esperança.</p></div></div>
         <p class="hero-choice-note" id="choiceNote">Sua oração chega sempre na hora certa. Cada pessoa começa do início, no próprio ritmo.</p>
         <p class="welcome-note">Sem cadastro para rezar, sem exposição de identidade. Um momento de fé, cuidado e acolhimento.</p>
       </div>
     </div>
-    <div class="hero-lower">Um espaço de oração, todos os dias.</div>
+    
   </div>
 </section>
 
-    <section class="prayer-section" id="oracao">
+    <section class="altar-home" aria-labelledby="homeAltarTitle">
+<div class="altar-home-top"><div><span class="section-kicker">UMA LUZ, UMA INTENÇÃO</span><h2 id="homeAltarTitle">Velas acesas em oração</h2><p>Uma chama de fé para cada intenção.</p></div><a href="#altar" class="button button-outline">Acender minha vela</a></div>
+<div class="altar-votives" id="candleAltar" aria-live="polite"></div>
+</section>
+<section class="prayer-section" id="oracao">
       <div class="section-heading"><span class="section-kicker">01 / ENCONTRO</span><h2>Um momento seu,<br><em>em oração.</em></h2><p>Reze o terço quando desejar, começando pelo Sinal da Cruz no momento em que entrar. O terço completo leva cerca de 22 minutos no ritmo padrão: um tempo para respirar, se recompor e reacender a esperança.</p></div>
       <div class="prayer-panel">
         <div class="prayer-panel-head"><span class="session-label" id="sessionLabel">PRONTO PARA COMEÇAR</span><span class="participant-badge"><span class="green-dot"></span><span id="onlineLabel">Contador coletivo disponível após conectar o projeto</span></span></div>
@@ -605,11 +629,11 @@ window.TERCO_CONFIG = {
          <div class="altar-pediment"><div>ALTAR DE LUZ E PRECE</div></div>
          <div class="altar-sanctuary">
            
-           <figure class="altar-aparecida"><img src="assets/nossa-senhora-fatima.svg" loading="lazy" alt="Nossa Senhora de Fátima em um altar claro e sereno" /><figcaption>NOSSA SENHORA DE FÁTIMA, ROGAI POR NÓS</figcaption></figure>
+           <figure class="altar-aparecida"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Our_Lady_of_Fatima_Statue.jpg" loading="lazy" alt="Imagem de Nossa Senhora de Fátima no Santuário português" /><figcaption>NOSSA SENHORA DE FÁTIMA, ROGAI POR NÓS</figcaption></figure>
            
          </div>
          <div class="altar-shelf-title">Velas acesas em oração</div>
-         <div class="altar-votives" id="candleAltar" aria-live="polite"></div>
+         <p class="altar-moved-note">As velas acesas pela comunidade aparecem no início desta página.</p>
          <div class="altar-stone"><span>Que a luz se multiplique.</span></div>
        </div>
        <div class="altar-more-wrap"><button id="loadMoreCandles" type="button" class="button altar-more" hidden>Ver mais velas acesas ↓</button><p class="altar-hint">Cada vela permanece visível por 1 hora. Novas chamas entram continuamente no altar.</p></div>
@@ -617,7 +641,7 @@ window.TERCO_CONFIG = {
     </section>
     <section class="closing-section"><span>✦</span><h2>“Onde dois ou três estiverem reunidos<br>em meu nome, eu estou ali, no meio deles.”</h2><p>Mateus 18,20</p><a href="#inicio">Voltar ao início ↑</a></section>
   </main>
-  <footer><strong>✝ Luz e Prece</strong><span>Projeto comunitário independente • Oração, esperança e acolhimento</span><span>Este site não é vinculado à Igreja Católica nem a instituições públicas.</span><span>Arte devocional original criada para este projeto.</span></footer>
+  <footer><strong>✝ Luz e Prece</strong><span>Projeto comunitário independente • Oração, esperança e acolhimento</span><span>Este site não é vinculado à Igreja Católica nem a instituições públicas.</span><span>Arte devocional original criada para este projeto.</span><span class="image-credit">Imagem de Nossa Senhora de Fátima: Conferencia Episcopal Española, <a href="https://commons.wikimedia.org/wiki/File:Our_Lady_of_Fatima_Statue.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 2.0.</span></footer>
  </div>
 <script>
 (() => {
@@ -914,7 +938,7 @@ window.TERCO_CONFIG = {
   // Plantão de oração: válido APENAS no dia 25/10/2026 pelo calendário de Brasília.
   // Cada fuso selecionado marca seus encontros no começo da hora local.
   const ELECTION_DAY_YEAR=2026,ELECTION_DAY_MONTH=10,ELECTION_DAY_DATE=25;
-  const regularHeroDescription='Um espaço para encontrar serenidade, agradecer, pedir e confiar. Reze o terço sob o manto de Nossa Senhora, onde estiver e quando precisar.';
+  const regularHeroDescription='Um instante de serenidade para rezar, agradecer e confiar. Comece o terço quando desejar.';
   const regularSectionDescription='Reze o terço quando desejar, começando pelo Sinal da Cruz no momento em que entrar. O terço completo leva cerca de 22 minutos no ritmo padrão: um tempo para respirar, se recompor e reacender a esperança.';
   const regularPrayerWelcome='O terço está sempre disponível. Comece pelo Sinal da Cruz, no seu tempo, sem perder nenhuma oração.';
   const regularTitle=document.title;
@@ -923,7 +947,7 @@ window.TERCO_CONFIG = {
     document.body.classList.remove('election-day');
     const desc=document.querySelector('.hero-intro .hero-description');
     const sectionIntro=document.querySelector('#oracao .section-heading p');
-    if(desc)desc.textContent='Um espaço para encontrar serenidade, agradecer, pedir e confiar. Reze o terço sob o manto de Nossa Senhora, onde estiver e quando precisar.';
+    if(desc)desc.textContent='Um instante de serenidade para rezar, agradecer e confiar. Comece o terço quando desejar.';
     if(sectionIntro)sectionIntro.textContent='O terço está sempre disponível. Comece pelo Sinal da Cruz quando desejar; no ritmo padrão, a oração completa leva cerca de 22 minutos.';
     if(mode==='idle')$('prayerText').textContent='Comece seu terço completo agora, desde a primeira oração, e siga no seu tempo.';
     document.title='Luz e Prece • Um espaço para rezar e acolher';
