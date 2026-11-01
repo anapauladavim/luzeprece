@@ -543,6 +543,40 @@ a:focus-visible,button:focus-visible{outline:3px solid #b68c51!important;outline
 .prayer-panel .participant-badge{display:inline-flex!important}
 @media(max-width:760px){.hero-art .hero-rosary-image{height:225px!important}.altar-home{padding:18px 14px 20px!important}.altar-home-top{gap:8px;align-items:flex-start}.altar-home-top .button{padding:10px!important;font-size:11px!important;white-space:nowrap}.altar-home .altar-votives{min-height:76px!important}}
 
+/* LUZ E PRECE — real homepage rebuild, not legacy hero recoloring */
+.sanctuary-hero{background:radial-gradient(ellipse at 70% 42%,#f0dbc0 0%,transparent 46%),linear-gradient(105deg,#f8f4ed 0%,#f3efe7 54%,#eae8db 100%);position:relative;overflow:hidden}
+.sanctuary-hero-inner{max-width:1140px;margin:auto;min-height:460px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(230px,.85fr);align-items:center;gap:38px;padding:38px 40px 0}
+.sanctuary-copy{text-align:center;position:relative;z-index:2;padding-bottom:36px}
+.sanctuary-kicker{font-size:11px;letter-spacing:.19em;color:#9d8d74;font-weight:600;margin:0 0 10px}
+.sanctuary-copy h1{font:500 clamp(55px,6.7vw,100px)/1.09 var(--font-serif);color:#275357;margin:0;letter-spacing:-.05em}
+.sanctuary-subtitle{font:italic 500 clamp(28px,3.5vw,50px)/1.35 var(--font-serif);color:#b08b50;margin:6px 0 8px}
+.sanctuary-flourish{color:#bda374;display:flex;align-items:center;justify-content:center;gap:16px;font-size:18px;margin:0 0 15px}
+.sanctuary-flourish span{display:block;width:60px;height:1px;background:#c9b187}
+.sanctuary-copy .hero-description{font:400 clamp(16px,1.7vw,22px)/1.65 var(--font-serif);color:#4c6261;max-width:500px;margin:0 auto 22px!important;text-align:center}
+.sanctuary-copy .hero-main-cta{display:inline-flex!important;justify-content:center;align-items:center;max-width:290px;margin:0 auto!important;padding:13px 25px!important;min-height:63px!important;border-radius:100px!important}
+.sanctuary-copy .cta-title{font:500 22px var(--font-serif)!important}
+.sanctuary-copy .cta-copy small{font-size:10px!important;letter-spacing:.03em}
+.sanctuary-copy .cta-arrow{display:none}
+.sanctuary-photo{height:440px;position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.sanctuary-halo{position:absolute;width:350px;height:350px;bottom:10px;border-radius:50%;background:radial-gradient(circle,#f8e6c2 0%,#f7e6c9b5 43%,transparent 73%)}
+.sanctuary-photo img{position:relative;height:425px;width:auto;max-width:100%;object-fit:contain;filter:brightness(1.12) saturate(.67);-webkit-mask-image:linear-gradient(to bottom,black 78%,transparent 100%);mask-image:linear-gradient(to bottom,black 78%,transparent 100%)}
+.sanctuary-hero .schedule-card,.sanctuary-hero .hero-context{display:none!important}
+.sanctuary-candle-strip{max-width:1170px;margin:-1px auto 0;border:1px solid #e3d2ba;background:linear-gradient(100deg,#fcf8f1,#f2e9db);border-radius:22px;padding:19px 26px;display:grid;grid-template-columns:245px 1fr;gap:26px;align-items:center;box-shadow:0 12px 27px #856d4b13;position:relative;z-index:2}
+.sanctuary-candle-intro{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.sanctuary-candle-intro h2{font:500 29px var(--font-serif);color:#2c5558;margin:0}
+.sanctuary-candle-intro p{color:#576c68;font-size:13px;line-height:1.5;margin:0}
+.candle-illustration{font-size:25px;color:#b18f5a}
+.sanctuary-candle-intro a{display:inline-flex;align-items:center;gap:6px;border:1px solid #c7a46b;border-radius:25px;padding:8px 14px;color:#876839!important;text-decoration:none;font-size:13px;font-weight:600;margin-top:8px}
+.sanctuary-candle-strip #candleAltar{display:flex!important;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;min-height:116px;max-height:160px;overflow:auto;background:transparent!important;border:0!important;box-shadow:none!important;padding:10px!important}
+.sanctuary-tiles{max-width:1140px;margin:27px auto 25px;padding:0 16px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sanctuary-tiles a{display:flex;flex-direction:column;align-items:center;gap:7px;padding:17px 17px 14px;background:#fcf8f1;border:1px solid #e7dfd5;border-radius:20px;color:#2e5357;text-align:center;text-decoration:none;box-shadow:0 8px 18px #5363520d;min-height:160px}
+.sanctuary-tiles a>span{font-size:28px;color:#b19365;line-height:1}
+.sanctuary-tiles strong{font:500 24px var(--font-serif);color:#2b5458}
+.sanctuary-tiles small{font-size:12px;color:#63726d;max-width:220px;line-height:1.5}
+.sanctuary-tiles b{font-size:20px;color:#b4935f;font-weight:400}
+.altar-aparecida img{filter:brightness(1.12) saturate(.72)!important}
+@media(max-width:760px){.sanctuary-hero-inner{grid-template-columns:1fr;padding:33px 18px 0;gap:0;min-height:unset}.sanctuary-copy{padding-bottom:10px}.sanctuary-copy h1{font-size:53px}.sanctuary-subtitle{font-size:29px}.sanctuary-photo{height:225px}.sanctuary-photo img{height:260px}.sanctuary-halo{height:260px;width:260px}.sanctuary-candle-strip{margin:0 12px;border-radius:17px;grid-template-columns:1fr;gap:6px;padding:17px}.sanctuary-candle-intro{align-items:center;text-align:center}.sanctuary-candle-strip #candleAltar{max-height:150px;min-height:76px}.sanctuary-tiles{grid-template-columns:1fr 1fr;gap:10px;margin:17px auto}.sanctuary-tiles a{padding:14px 8px;min-height:145px}.sanctuary-tiles strong{font-size:20px}.sanctuary-tiles a:last-child{grid-column:1/-1;min-height:120px}.sanctuary-copy .hero-description{font-size:16px!important}}
+
 </style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
   <script>
@@ -568,39 +602,14 @@ window.TERCO_CONFIG = {
 
   <nav class="sanctuary-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#oracao">✧ Rezar o terço</a><a href="#altar">Acender uma vela</a><a href="#intencoes">Intenções</a></nav>
   <main id="inicio">
-        <section class="hero hero-campaign" aria-labelledby="heroTitle">
-  <div class="hero-campaign-wrap">
-    <div class="hero-grid">
-      <div class="hero-intro">
-        
-        <span class="welcome-seal">UM ESPAÇO PARA ACOLHER SUA FÉ</span><h1 id="heroTitle">Luz e<br><em>Prece</em></h1><p style="font-family:var(--font-serif);font-style:italic;color:#9a7f5c;font-size:clamp(19px,2.5vw,30px);margin:0 0 14px">Um instante de paz.</p>
-        <p class="hero-description">Um instante de serenidade para rezar, agradecer e confiar. Comece o terço quando desejar.</p>
-      </div>
-      <div class="hero-art"><img class="hero-rosary-image" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Our_Lady_of_Fatima_Statue.jpg" alt="Imagem de Nossa Senhora de Fátima no Santuário de Fátima" width="390" height="503" /></div>
-      <div class="hero-buttons">
-        <button class="button button-primary hero-main-cta" id="joinButton"><span class="cta-play" aria-hidden="true">▶</span><span class="cta-copy"><strong class="cta-title">Participar do terço</strong><small>Um instante de paz, no seu próprio ritmo.</small></span><span class="cta-arrow" aria-hidden="true">→</span></button>
-        <a class="button button-outline hero-more" href="#intencoes">Saiba mais <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="schedule-card" hidden aria-hidden="true">
-        <div class="schedule-top"><span id="scheduleHeading">ENCONTRO DIÁRIO, ORAÇÃO A QUALQUER HORA</span><span class="live-chip" id="liveChip">● TERÇO DISPONÍVEL AGORA</span></div>
-        <div class="schedule-row"><div><strong id="clockLabel">13:00</strong><small id="timeSubtitle">A corrente se abre às 13h</small></div><div class="schedule-divider"></div><div class="countdown" id="countdown">—</div></div>
-        <p class="timezone-note" id="timezoneNote">Todos os horários exibidos são de Brasília (UTC−3). Reze de onde estiver.</p>
-        <select id="timezoneSelect" hidden aria-hidden="true"><option value="America/Sao_Paulo">Brasília</option></select>
-      </div>
-      <div class="hero-context" hidden aria-hidden="true">
-        <div class="collective-callout" id="collectiveCallout" role="status" aria-live="polite"><div><strong id="collectiveHeadline">Uma pausa para a fé, sempre que precisar.</strong><p id="collectiveMessage">Chegue como estiver. Aqui há espaço para sua fé, seus agradecimentos, suas preocupações e sua esperança.</p></div></div>
-        <p class="hero-choice-note" id="choiceNote">Sua oração chega sempre na hora certa. Cada pessoa começa do início, no próprio ritmo.</p>
-        <p class="welcome-note">Sem cadastro para rezar, sem exposição de identidade. Um momento de fé, cuidado e acolhimento.</p>
-      </div>
-    </div>
-    
-  </div>
+        <section class="sanctuary-hero" aria-labelledby="heroTitle">
+<div class="sanctuary-hero-inner">
+ <div class="sanctuary-copy"><p class="sanctuary-kicker">UM ESPAÇO DE FÉ E ACOLHIMENTO</p><h1 id="heroTitle">Luz e Prece</h1><p class="sanctuary-subtitle">Um instante de paz.</p><div class="sanctuary-flourish" aria-hidden="true"><span></span>✝<span></span></div><p class="hero-description">Há momentos em que tudo o que precisamos é silenciar o mundo e elevar o coração.</p><button class="button button-primary hero-main-cta" id="joinButton"><span class="cta-play" aria-hidden="true">◌</span><span class="cta-copy"><strong class="cta-title">Rezar o terço</strong><small>Comece quando desejar</small></span></button></div>
+ <div class="sanctuary-photo"><div class="sanctuary-halo"></div><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Our_Lady_of_Fatima_Statue.jpg" alt="Imagem devocional de Nossa Senhora de Fátima" width="359" height="869" /></div>
+</div><div class="schedule-card" hidden aria-hidden="true"><span id="scheduleHeading"></span><span id="liveChip"></span><strong id="clockLabel"></strong><small id="timeSubtitle"></small><span id="countdown"></span><p id="timezoneNote"></p><select id="timezoneSelect" hidden><option value="America/Sao_Paulo">Brasília</option></select></div><div class="hero-context" hidden aria-hidden="true"><div id="collectiveCallout"><strong id="collectiveHeadline"></strong><p id="collectiveMessage"></p></div><p id="choiceNote"></p></div>
 </section>
-
-    <section class="altar-home" aria-labelledby="homeAltarTitle">
-<div class="altar-home-top"><div><span class="section-kicker">UMA LUZ, UMA INTENÇÃO</span><h2 id="homeAltarTitle">Velas acesas em oração</h2><p>Uma chama de fé para cada intenção.</p></div><a href="#altar" class="button button-outline">Acender minha vela</a></div>
-<div class="altar-votives" id="candleAltar" aria-live="polite"></div>
-</section>
+<section class="sanctuary-candle-strip" aria-labelledby="homeAltarTitle"><div class="sanctuary-candle-intro"><span aria-hidden="true" class="candle-illustration">♧</span><div><h2 id="homeAltarTitle">Altar de Velas</h2><p>Acenda uma vela e confie sua intenção.</p></div><a href="#altar">Acender vela <span aria-hidden="true">→</span></a></div><div class="altar-votives" id="candleAltar" aria-live="polite"></div></section>
+<nav class="sanctuary-tiles" aria-label="Explore Luz e Prece"><a href="#oracao"><span>◌</span><strong>O Terço</strong><small>Reze com serenidade, no seu tempo.</small><b>→</b></a><a href="#intencoes"><span>♡</span><strong>Intenções</strong><small>Encontre motivos para elevar uma prece.</small><b>→</b></a><a href="#altar"><span>♧</span><strong>Velas</strong><small>Uma luz para cada intenção.</small><b>→</b></a></nav>
 <section class="prayer-section" id="oracao">
       <div class="section-heading"><span class="section-kicker">01 / ENCONTRO</span><h2>Um momento seu,<br><em>em oração.</em></h2><p>Reze o terço quando desejar, começando pelo Sinal da Cruz no momento em que entrar. O terço completo leva cerca de 22 minutos no ritmo padrão: um tempo para respirar, se recompor e reacender a esperança.</p></div>
       <div class="prayer-panel">
