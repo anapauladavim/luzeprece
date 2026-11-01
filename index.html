@@ -523,7 +523,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #b68c51!important;outline
 .candles-section .candle-form-card{box-shadow:none!important}
 @media(max-width:760px){.hero-grid{display:flex!important;flex-direction:column!important;gap:8px!important}.hero-art{max-width:240px!important}.hero-art .hero-rosary-image{max-height:295px!important}.hero h1{font-size:56px!important}.hero-campaign-wrap{padding-left:14px!important;padding-right:14px!important}.hero .hero-intro{padding:0!important}.schedule-card{width:100%!important}.altar-aparecida img{height:240px!important}.hero-context{margin-top:8px!important}}
 
-</style>
+.intention-card:after{content:none!important;display:none!important}\n</style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
   <script>
 // Para habilitar as velas compartilhadas e a contagem ao vivo, preencha abaixo.
@@ -918,31 +918,6 @@ window.TERCO_CONFIG = {
   const regularSectionDescription='Reze o terço quando desejar, começando pelo Sinal da Cruz no momento em que entrar. O terço completo leva cerca de 22 minutos no ritmo padrão: um tempo para respirar, se recompor e reacender a esperança.';
   const regularPrayerWelcome='O terço está sempre disponível. Comece pelo Sinal da Cruz, no seu tempo, sem perder nenhuma oração.';
   const regularTitle=document.title;
-  function electionDayInBrazil(date){
-    const br=dayParts(date,'America/Sao_Paulo');
-    return br.year===ELECTION_DAY_YEAR && br.month===ELECTION_DAY_MONTH && br.day===ELECTION_DAY_DATE;
-  }
-  function updateElectionDayClock(now){
-    const local=dayParts(now,'America/Sao_Paulo');
-    // Os encontros e a contagem regressiva usam exclusivamente o horário de Brasília.
-    const elapsed=(local.minute*60+local.second)*1000+now.getMilliseconds();
-    const isLit=elapsed<30*60*1000,afterLast=local.hour===23&&!isLit;
-    const slotHour=pad(local.hour),nextHour=pad((local.hour+1)%24);
-    const displayHour=isLit||afterLast?slotHour:nextHour;
-    const remaining=isLit?30*60*1000-elapsed:60*60*1000-elapsed;
-    const seconds=Math.max(0,Math.floor(remaining/1000));
-    document.body.classList.toggle('celebration',isLit);
-    $('scheduleHeading').textContent='25 DE OUTUBRO ★ CORRENTE DE HORA EM HORA';
-    $('liveChip').textContent=isLit?'● CORRENTE DE ORAÇÃO ABERTA':afterLast?'★ DIA DE ORAÇÃO • TERÇO LIVRE':`★ PRÓXIMO ENCONTRO ÀS ${nextHour}H`;
-    $('clockLabel').textContent=`${displayHour}:00`;
-    $('timeSubtitle').textContent=isLit?`O encontro das ${slotHour}h está iluminado por 30 minutos`:afterLast?'Última hora do dia • reze quando quiser':'Uma nova corrente começa a cada hora cheia';
-    $('countdown').textContent=isLit?`Iluminado por ${formatSeconds(seconds)}`:afterLast?'Reze agora':`${pad(Math.floor(seconds/3600))}:${pad(Math.floor(seconds%3600/60))}:${pad(seconds%60)}`;
-    $('collectiveHeadline').textContent=isLit?`A corrente das ${slotHour}h está acesa!`:'Hoje, terço de hora em hora!';
-    $('collectiveMessage').textContent=isLit?'Neste dia da eleição, unamos nossas orações pela paz, pela proteção e pela democracia. Você pode começar seu terço completo agora, sem perder nenhuma oração.':'Neste 25 de outubro, rezemos a cada hora pelo Brasil, sob a intercessão de Nossa Senhora Aparecida. Onde você estiver, comece sua oração quando quiser.';
-    $('joinButton').querySelector('.cta-title').textContent='Rezar o terço agora';
-    $('choiceNote').textContent='De hora em hora, pelo horário de Brasília. Reze de onde estiver, começando pelo Sinal da Cruz.';
-    if(mode==='free')syncStep();
-  }
   function updateClock(){
     const now=new Date();
     document.body.classList.remove('election-day');
